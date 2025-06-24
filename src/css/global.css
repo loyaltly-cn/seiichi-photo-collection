@@ -10,3 +10,7 @@ p{
     margin: 0;
     padding: 0;
 }
+
+.var-uploader__file-list{
+    justify-content: center;
+}

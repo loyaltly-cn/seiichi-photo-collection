@@ -20,7 +20,7 @@ onBeforeMount(() => even.init())
       </div>
       <var-divider/>
     </div>
-    <div class="flex gap-5 flex-wrap" v-if="obj.files.length">
+    <div class="flex gap-5 flex-wrap">
       <var-card v-for="(item,index) in obj.files" :key="index" class="w-58 h-54">
         <template #image>
           <var-image :src="item.cover" width="230" height="230" @click="ImagePreview(item.cover || '')"/>
@@ -31,7 +31,7 @@ onBeforeMount(() => even.init())
               <small>图片{{index+1}}</small>
               <var-icon :name="item.select?'checkbox-blank-outline':'checkbox-marked'" @click="item.select=!item.select" :transition="100" class="hover-cursor-pointer" v-ripple/>
             </div>
-            <var-icon name="delete" class="hover:cursor-pointer" title="删除" @click="even.del(index)"/>
+            <var-icon name="delete" class="hover:cursor-pointer hover:color-red" title="删除" @click="even.del(index)"/>
           </div>
           <div class="flex items-center justify-between">
             <small>持续时间(s)</small>
@@ -40,8 +40,12 @@ onBeforeMount(() => even.init())
         </div>
       </var-card>
     </div>
-    <div class="flex flex-col gap-5" v-else>
-
-    </div>
+    <var-uploader v-model="obj.files" multiple hide-list  v-if="!obj.files.length">
+      <div class="flex flex-col gap-5 items-center bg-surfaceContainerHigh p10 rounded-5 var-elevation--2 hover-cursor-pointer">
+        <var-icon name="image-outline"  class="bg-body p5 rounded-24" size="50"/>
+        <h1>Drop image here or click to upload</h1>
+        <h3 class="color-primary">PNG,JPG or GIF</h3>
+      </div>
+    </var-uploader>
   </div>
 </template>

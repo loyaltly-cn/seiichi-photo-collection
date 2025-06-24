@@ -17,7 +17,7 @@ const connect = async () =>{
             obj.state.connect = !obj.state.connect
         }else disconnect()
     } catch (e) {
-        Snackbar.error('串口连接失败')
+        Snackbar.error('设备连接失败')
     }
 }
 
