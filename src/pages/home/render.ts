@@ -1,0 +1,25 @@
+export default{
+    rate:[{
+        label:0.5,
+        value:0  
+    },{
+        label:1,
+        value:1  
+    },{
+        label:2,
+        value:2  
+    },{
+        label:5,
+        value:3  
+    }],
+    tf:[{
+        label:'关闭',
+        value:0  
+    },{
+        label:'左',
+        value:1  
+    },{
+        label:'右',
+        value:2  
+    }]
+}

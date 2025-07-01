@@ -10,12 +10,22 @@ declare module 'vue' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    'Var-': typeof import('@varlet/ui')['_-Component']
     VarButton: typeof import('@varlet/ui')['_ButtonComponent']
     VarCard: typeof import('@varlet/ui')['_CardComponent']
     VarCounter: typeof import('@varlet/ui')['_CounterComponent']
     VarDivider: typeof import('@varlet/ui')['_DividerComponent']
+    VarDrvider: typeof import('@varlet/ui')['_DrviderComponent']
     VarIcon: typeof import('@varlet/ui')['_IconComponent']
     VarImage: typeof import('@varlet/ui')['_ImageComponent']
+    VarImgage: typeof import('@varlet/ui')['_ImgageComponent']
+    VarInput: typeof import('@varlet/ui')['_InputComponent']
+    VarPopup: typeof import('@varlet/ui')['_PopupComponent']
+    VarRadio: typeof import('@varlet/ui')['_RadioComponent']
+    VarRadioGroup: typeof import('@varlet/ui')['_RadioGroupComponent']
+    VarSlider: typeof import('@varlet/ui')['_SliderComponent']
+    VarSwitch: typeof import('@varlet/ui')['_SwitchComponent']
+    VarTable: typeof import('@varlet/ui')['_TableComponent']
     VarUploader: typeof import('@varlet/ui')['_UploaderComponent']
   }
   export interface GlobalDirectives {
